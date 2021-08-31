@@ -1,4 +1,18 @@
 .App {
   text-align: center;
+  margin-top: 1rem;
 }
 
+.btn{
+  color: white; 
+  background-color: green;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  margin-right: 5px;
+  font-size: 1rem;
+}
+
+.highlight{
+  color: red;
+}

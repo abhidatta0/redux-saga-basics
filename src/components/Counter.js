@@ -7,14 +7,14 @@ const Counter = () => {
     const dispatch = useDispatch();
     return (
         <div>
-            <button onClick={() => dispatch(incrementNumber())}>
+            <button onClick={() => dispatch(incrementNumber())} className="btn">
                 Increment
             </button>
-            <button onClick={() => dispatch(decrementNumber())}>
+            <button onClick={() => dispatch(decrementNumber())} className="btn">
                 Decrement
             </button>
             <div>
-                Clicked {currentCount} times
+                Clicked <span className="highlight">{currentCount}</span> times
             </div>
         </div>
     )
