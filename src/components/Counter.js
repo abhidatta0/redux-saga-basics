@@ -7,7 +7,7 @@ const Counter = () => {
                 Increment
             </button>
             <button>
-                Increment
+                Decrement
             </button>
             <div>
                 Clicked 0 times
