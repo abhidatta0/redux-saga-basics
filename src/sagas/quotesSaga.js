@@ -1,11 +1,12 @@
-import { all, call, takeEvery } from 'redux-saga/effects';
-import axios from 'axios';
+import { all, call, takeEvery, put } from 'redux-saga/effects';
+import { getSingleQuote } from '../apis/quotes';
+import { setQuote } from '../actions/quoteActions';
 
 function* _fetchQuotes() {
     try {
-        const url = `https://api.quotable.io/random`;
-        const response = yield call(() => axios.get(url));
+        const response = yield call(getSingleQuote);
         console.log(response);
+        yield put(setQuote(response))
     }
     catch (e) {
         console.log(e);
