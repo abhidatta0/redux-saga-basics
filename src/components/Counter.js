@@ -1,16 +1,20 @@
 import React from 'react';
+import { incrementNumber, decrementNumber } from '../actions/updownActions';
+import { useSelector, useDispatch } from 'react-redux';
 
 const Counter = () => {
+    const currentCount = useSelector((state) => state.updownReducer.currentCount);
+    const dispatch = useDispatch();
     return (
         <div>
-            <button>
+            <button onClick={() => dispatch(incrementNumber())}>
                 Increment
             </button>
-            <button>
+            <button onClick={() => dispatch(decrementNumber())}>
                 Decrement
             </button>
             <div>
-                Clicked 0 times
+                Clicked {currentCount} times
             </div>
         </div>
     )
