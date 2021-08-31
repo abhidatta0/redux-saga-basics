@@ -5,7 +5,6 @@ import { setQuote } from '../actions/quoteActions';
 function* _fetchQuotes() {
     try {
         const response = yield call(getSingleQuote);
-        console.log(response);
         yield put(setQuote(response))
     }
     catch (e) {
