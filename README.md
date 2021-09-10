@@ -1,4 +1,4 @@
-## Basic redux setup in react without saga 
+## Basic redux saga setup 
 ### In this, I made an app where there are two buttons: one for increment and another for decrement.
 ### The redux state is used so the state can be accessed from another component.
 ### The folder structure can be scaled to have more reducers.
